@@ -1,0 +1,467 @@
+
+@font-face {
+    font-family: 'bebe';
+    src: url("font/Baby.otf");
+}
+
+
+body {
+
+background-color: aliceblue;
+margin: auto;
+
+}
+
+.form {
+
+display: flex;
+flex-direction: column;
+width: 10%;
+margin: 10px auto;
+background-color: pink;
+padding: 40px 80px;
+border-radius: 10px;
+
+}
+
+.label {
+
+    margin: 10px 0;
+    font-family: arial;
+    font-size: 20px;
+
+}
+
+.input {
+
+padding: 8px 0;
+font-size: 15px;
+text-align: center;
+
+
+}
+
+.marque {
+
+display: flex;
+justify-content: center;
+margin : 60px 0;
+
+}
+
+
+
+
+.entete {
+
+
+    background-color:beige;
+    padding: 10px 0;
+    background: linear-gradient(100deg, beige 85%, pink 85%);
+   
+}
+
+
+
+
+.entete ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    list-style-type: none;
+
+ 
+
+}
+
+.entete ul li {
+
+margin: 0 15px;
+
+
+}
+
+
+.entete .smenu {
+
+display: none;
+
+
+}
+
+.login {
+
+
+visibility: hidden;
+
+
+
+}
+
+li:hover .login{
+
+visibility: visible;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+text-align: center;
+color: black;
+transition: 0.3s;
+
+}
+
+.entete:hover .smenu {
+
+display: contents;
+
+
+
+}
+
+
+
+
+
+.entete .smenu2 {
+
+display: flex;
+flex-direction:column;
+font-family: 'bebe';
+
+
+
+
+}
+
+.smenu2 li {
+
+display: flex;
+justify-content: center;
+
+}
+
+
+.smenu2 li a {
+
+
+text-decoration: none;
+font-size: 35px;
+color: slateblue;
+
+
+}
+
+
+.smenu2 li a:hover {
+
+
+color: aqua;
+transition: 0.3s;
+
+
+
+}
+
+.link {
+
+text-decoration: none;
+color: pink;
+font-family: 'bebe';
+font-size: 45px;
+text-shadow: 1px 1px 1px rgba(0,0,0,1);
+position: relative;
+
+}
+
+
+
+.icon {
+
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+   
+   }
+
+
+.link:hover .icon {
+
+display:inline-block;
+align-self: center;
+opacity: 1;
+
+}
+
+
+h1 {
+
+font-size: 50px;
+
+}
+
+/*
+
+#loupe{
+
+width: 200px;
+height: 200px;
+border: solid 2px white;
+border-radius: 200px;
+position: absolute;
+background-image: url("images/hochets.jpg");
+background-size: 600px auto;
+box-shadow: 0 0 10px rgba(0,0,0,0.6);
+filter: brightness(1.2);
+
+}
+
+*/
+
+.image{
+
+margin:50 auto;
+position: relative;
+width : 1100px;
+overflow: hidden;
+
+}
+
+
+.bienv {
+
+    position: absolute;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'bebe';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px rgba(0,0,0,1) ;
+    color: pink;
+ 
+   
+    
+    
+    }
+
+
+
+
+.detail {
+
+    position: absolute;
+    font-size: 70px;
+    font-family: 'bebe';
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    color: pink;
+    text-align: center;
+   
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+   
+    
+    
+ }
+
+
+    
+
+
+.image .img {
+    
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    transition: transform 0.4s ease;
+   
+  }
+
+ .img:hover {
+
+opacity: 0.6;
+transform: scale(1.2);
+
+}
+
+
+
+.texte {
+
+
+font-size: 50px;
+font-family: 'bebe';
+color: pink;
+text-shadow: 1px 1px 1px rgba(0,0,0,1);
+
+
+}
+
+.texte:hover {
+
+color: aqua;
+transition: 0.3s;
+
+}
+
+.conditions ul li:hover {
+
+    color: aqua;
+    transition: 0.3s;
+
+}
+
+@keyframes appear {
+
+
+from {
+
+opacity: 0;
+scale: 0;
+}
+
+to {
+
+    opacity: 1;
+    scale: 1;
+
+}
+
+
+}
+
+
+
+
+
+.Hochets {
+
+display: flex;
+justify-content: left;
+margin-left: 50px;
+margin-top: 50px;
+animation: appear linear;
+animation-timeline: view();
+animation-range: entry 0% cover 40%;
+
+}
+
+
+
+.Autres {
+
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    margin-top: 50px;
+    animation: appear linear;
+   
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+
+.retour {
+
+    font-size: 40px;
+    font-family: 'bebe';
+    color: pink;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    text-decoration: none;
+
+}
+
+
+footer {
+
+background-color: beige ;
+padding: 20px 0;
+
+
+
+}
+
+.conditions ul {
+
+list-style-type: none;
+display: flex;
+flex-direction: row;
+justify-content: right;
+align-items: center;
+
+
+
+
+
+}
+
+.conditions ul li {
+
+margin: 0 40px;
+font-size: 40px;
+font-family: 'bebe';
+color: pink;
+text-shadow: 1px 1px 1px rgba(0,0,0,1);
+
+
+}
+
+
+
+
+.icone {
+
+    font-size: 40px;
+    padding: 10px 20px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+
+}
+
+.icone:hover {
+
+color: aqua;
+transition: 0.2s ease;
+
+
+}
+
+.retour {
+
+    font-size: 40px;
+    padding: 10px 20px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+
+}
+
+
+
+.retour:hover {
+
+color: aqua;
+transition: 0.2s ease;
+
+}
+
+.articles {
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 80px;
+    justify-content: center;
+  
+
+}
+
+
+
+
+
+
+
+
