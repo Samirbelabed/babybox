@@ -1,4 +1,48 @@
+<?php 
+include 'includes/db.php';
 
+session_start();
+
+if (isset($_POST['ok'])){
+
+    if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])){
+
+$nom = htmlspecialchars($_POST['nom']);
+$prenom = htmlspecialchars($_POST['prenom']);
+$pseudo = htmlspecialchars($_POST['pseudo']);
+$email = htmlspecialchars($_POST['email']);
+$mdp = sha1($_POST['password']);
+
+    
+$insertUser = $db->prepare('INSERT INTO users(nom, prenom, pseudo, email, password)VALUES(?, ?, ?, ?, ?)');
+$insertUser->execute(array($nom, $prenom, $pseudo, $email, $mdp));
+
+$recupUser = $db->prepare('SELECT * FROM users WHERE nom = ? AND prenom = ? AND pseudo = ? AND email = ? AND password = ?');
+$recupUser->execute(array($nom, $prenom, $pseudo, $email, $mdp));
+
+if ($recupUser->rowCount() > 0){
+
+    $_SESSION['nom'] = $nom;
+    $_SESSION['prenom'] = $prenom;
+    $_SESSION['pseudo'] = $pseudo;
+    $_SESSION['email'] = $email;
+    $_SESSION['password'] = $mdp;
+    $_SESSION['id'] = $recupUser->fetch()['id'];
+
+
+}
+
+
+header ('Location: inscription.php');
+
+
+}
+
+
+};
+
+
+?>
 
 
 
@@ -22,7 +66,7 @@
 <div style ="text-align: center; font-family: 'bebe'; font-size: 60px; padding: 20px 0; 
 text-shadow: 1px 1px 1px rgba(0,0,0,1); color: pink;"> Formulaire d'inscription </div>
 
-<form method="POST" action="traitement.php"> 
+<form method="POST" action="" align="center"> 
 
 
 

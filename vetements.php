@@ -1,21 +1,8 @@
 <?php 
 
-$host = 'localhost';    
-$dbname = 'boxforbabys';
-$username = 'samir';
-$password = 'sb89!';
+include 'db.php';
 
-try {
-    
-    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 
-   
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    echo "Connexion réussie à la base de données.";
-} catch (PDOException $e) {
-    echo "Erreur de connexion : " . $e->getMessage();
-}
 
 ?>
 
@@ -53,35 +40,10 @@ try {
 
 <ul>
 
-<li>  <a href="vetements.php" class="link">Vetements</a> 
-
-<div class="smenu">
-<ul class="smenu2"> 
-
-<li><a href="">Bandeau bebe</a></li>
-<hr style="width: 200px; border-color: brown;">
-<li> <a href="">Ensemble</a></li>
-<hr style="width: 200px; border-color: brown;">
-<li> <a href="">Cardigan</a></li>
-</ul>
-
-</div>
-
-</li>
+<li>  <a href="vetements.php" class="link">Vetements</a> </li>
 
 
-<li> <a href="" class="link">Accesoires-Jouets</a>
-<div class="smenu">
-<ul class="smenu2"> 
-<li><a href="">Hochets</a></li>
-<hr style="width: 200px; border-color: brown;">
-<li> <a href="">Attaches tetine</a></li>
-<hr style="width: 200px; border-color: brown;">
-<li> <a href="">Attaches doudou</a></li>
-</ul>
-
-</div>
-</li>
+<li> <a href="" class="link">Accesoires-Jouets</a></li>
 
 <li>  <a href="" class="link">Paniers de rangement</a> </li>
 <li>  <a href="" class="link">Contact</a></li>
