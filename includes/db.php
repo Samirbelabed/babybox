@@ -17,4 +17,11 @@ try {
     echo "Erreur de connexion : " . $e->getMessage();
 };
 
+
+function isLoggedIn() {
+    return isset($_SESSION['user_id']);
+}
+
+
+
 ?>

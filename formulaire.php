@@ -66,7 +66,7 @@ header ('Location: inscription.php');
 <div style ="text-align: center; font-family: 'bebe'; font-size: 60px; padding: 20px 0; 
 text-shadow: 1px 1px 1px rgba(0,0,0,1); color: pink;"> Formulaire d'inscription </div>
 
-<form method="POST" action="" align="center"> 
+<form method="POST" action="" align="center" id ="myForm"> 
 
 
 
@@ -109,6 +109,7 @@ text-shadow: 1px 1px 1px rgba(0,0,0,1); color: pink;"> Formulaire d'inscription 
 
 
 </form>
+
 
 
 <footer style =" background: linear-gradient(100deg, beige 94%, pink 94%);">

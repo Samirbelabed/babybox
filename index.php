@@ -2,7 +2,9 @@
 
 include 'db.php';
 
-$login = true;
+
+
+
 
 ?>
 
@@ -39,7 +41,7 @@ $login = true;
 
 <li>  <a href="vetements.php" class="link">Vetements</a> </li>
 <li> <a href="" class="link">Accesoires-Jouets</a>
-<li>  <a href="" class="link">Paniers</a> </li>
+<li>  <a href="paniers.php" class="link">Paniers</a> </li>
 <li>  <a href="" class="link">Contact</a></li>
 <li>  <a href="formulaire.php" class="link">Inscription</a></li>
 
@@ -49,8 +51,10 @@ $login = true;
 &nbsp;
 &nbsp;
 &nbsp;
-<li> <a href=""> <i class="fa-regular fa-heart icone"></i> </a> </li>
+
 <li> <a href="login.php" value =""> <i class="fa-regular fa-user icone"></i> </a> <p class="login">Login</p> </li>
+
+<li> <a href="includes/deconnexion.php" value =""> <i class="fa-solid fa-circle-user icone"></i> </a> <p class="login">Logout</p> </li>
 
 
 
@@ -74,7 +78,7 @@ $login = true;
 
 <div class ="image" id ="image">
 
-<a href="page_presentation.html"> <img src="images/Robe_blanche.jpg" alt="" class="img" id ="img"> </a>
+<a href="presentation.php"> <img src="images/Robe_blanche.jpg" alt="" class="img" id ="img"> </a>
 
 <div class = "bienv" id ="bienv"> Bienvenue sur Le site  </div>
 
@@ -113,6 +117,7 @@ image.addEventListener('mouseout', function(){
 
 bienvenue.style.opacity =  1;
 
+
 });
 
 
@@ -128,6 +133,7 @@ bouton.style.opacity =  1;
 image.addEventListener('mouseout', function(){
 
 bouton.style.opacity =  0;
+
 
 });
 

@@ -36,6 +36,7 @@ include 'db.php';
 
 
 
+
 <ul>
 
 <li>  <a href="vetements.php" class="link">Vetements</a> </li>
@@ -70,15 +71,18 @@ include 'db.php';
 <?php
 
 
-$sql = "SELECT * FROM vetements";
+
+$sql = "SELECT * FROM paniers";
 $stmt = $db->query($sql);
 
 while ($row = $stmt->fetch()){
 
 
-    echo ' <ul style="list-style-type: none;">
+    echo '
+            
+    <ul style="list-style-type: none;">
     
-    <li id ="" style =" border-radius: 10px; color: black;  background: linear-gradient(0deg, beige 85%, pink 15% );  
+    <li id ="chaussure" style =" border-radius: 10px; color: black;  background: linear-gradient(0deg, beige 85%, pink 15% );  
     padding-top: 10px; padding-bottom: 10px; box-shadow: 5px 5px 5px black; width: 400px; height:500px; font-size:21px;">
     <strong style="font-style: italic; margin-left: 10px;"> '. $row['produit'] .' </strong> </br> &nbsp; '. $row['prix'] .' 
     <i> eur </i>
@@ -94,10 +98,7 @@ while ($row = $stmt->fetch()){
 
 
 
-}
-
-
-
+};
    
 
 

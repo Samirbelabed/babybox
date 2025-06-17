@@ -4,7 +4,7 @@ include 'includes/db.php';
 
 
 
-session_start();
+
 
 
 if (isset($_POST['envoi'])){
